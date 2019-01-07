@@ -22,6 +22,9 @@ The project will start on localhost:3000
 
 ## Built with
 
+* Visual Studio Code  
+* Babel  
+* Webpack  
 * Spring Tool Suite 4.0.1
 * MAMP (MySQL Database)
 
