@@ -82,3 +82,31 @@ typings/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+
+moviesep-webapi/target/
+!moviesep-webapi/.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+moviesep-webapi/.apt_generated
+moviesep-webapi/.classpath
+moviesep-webapi/.factorypath
+moviesep-webapi/.project
+moviesep-webapi/.settings
+moviesep-webapi/.springBeans
+moviesep-webapi/.sts4-cache
+
+### IntelliJ IDEA ###
+moviesep-webapi/.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+moviesep-webapi/nbproject/private/
+moviesep-webapi/build/
+moviesep-webapi/nbbuild/
+moviesep-webapi/dist/
+moviesep-webapi/nbdist/
+moviesep-webapi/.nb-gradle/
