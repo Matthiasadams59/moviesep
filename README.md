@@ -15,14 +15,17 @@ mvn clean compile package
 java -jar target/moviesep-webapi-0.0.1-SNAPSHOT.jar  
 ```
 If everything is fine, the api server should start listening on port 8080.  
+
 Performing a GET request will return :  
 * The list of actors on /actor/, a specific actor on /actor/{id}  
 * The list of users on /user/, a specific user on /user/{id}  
-* The list of films on /film/, a specific film on /film/{id}
+* The list of films on /film/, a specific film on /film/{id}  
+
 Performing a POST request :
 * To create an actor on /actor/, to update a specific actor on /actorUpdate/{id}  
 * To create a film on /film/, to update a specific film on /filmUpdate/{id}  
-* To create a user on /user/, to update a specific user on /userUpdate/{id}
+* To create a user on /user/, to update a specific user on /userUpdate/{id}  
+
 Performing a DELETE request :  
 * To delete an actor on /actorDelete/{id}  
 * To delete a film on /filmDelete/{id}  
