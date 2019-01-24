@@ -4,8 +4,9 @@ React project bootstrapped with [Create React App](https://github.com/facebook/c
 
 ## Deployment
 
-To launch the Java API Server, first of all import the moviesep database from the moviesep-webapi into your MySQL provider.
-Once imported edit the file : moviesep-webapi/src/main/resources/application.properties to make sure the configuration correspond to your MySQL provider settings (by default, using MAMP the MySQL port will be 8889, the default user/password will be root/root).  
+To launch the Java API Server, first of all import the moviesep database from the moviesep-webapi/ folder into your MySQL provider.  
+Once imported edit the file : moviesep-webapi/src/main/resources/application.properties to make sure the configuration correspond to your MySQL provider settings.  
+By default, using MAMP the MySQL port will be 8889, the default user/password will be root/root.  
 Then from the root of the project :  
 ```
 cd moviesep-webapi/  
