@@ -49,9 +49,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void saveUser(UserWO userWO) {
 		User user = new User();
-		user.setFirstName(userWO.getFirstName());
-		user.setLastName(userWO.getLastName());
-		user.setMail(userWO.getMail());
 		user.setPassword(userWO.getPassword());
 		user.setUsername(userWO.getUsername());
 		user.setFilms(userWO.getFilms());
@@ -61,9 +58,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void updateUser(UserWO userWO) {
 		User user2update = userRepository.findById(userWO.getUserId()).get();
-		user2update.setFirstName(userWO.getFirstName());
-		user2update.setLastName(userWO.getLastName());
-		user2update.setMail(userWO.getMail());
 		user2update.setPassword(userWO.getPassword());
 		user2update.setUsername(userWO.getUsername());
 		user2update.setFilms(userWO.getFilms());

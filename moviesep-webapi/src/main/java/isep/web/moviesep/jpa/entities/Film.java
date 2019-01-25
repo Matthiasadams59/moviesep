@@ -2,6 +2,9 @@ package isep.web.moviesep.jpa.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Date;
 import java.util.List;
 
@@ -32,18 +35,12 @@ public class Film implements Serializable {
 
 	private int length;
 
-	@Column(name="original_language", length=20)
-	private String originalLanguage;
-
 	@Column(length=20)
 	private String rating;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="release_year")
 	private Date releaseYear;
-
-	@Column(name="special_features", length=255)
-	private String specialFeatures;
 
 	@Column(nullable=false, length=255)
 	private String title;
@@ -59,9 +56,11 @@ public class Film implements Serializable {
 			@JoinColumn(name="actor_id", nullable=false)
 			}
 		)
+	@JsonIgnoreProperties("films")
 	private List<Actor> actors;
 
 	//bi-directional many-to-many association to User
+	@JsonIgnoreProperties("films")
 	@ManyToMany(mappedBy="films")
 	private List<User> users;
 
@@ -108,14 +107,6 @@ public class Film implements Serializable {
 		this.length = length;
 	}
 
-	public String getOriginalLanguage() {
-		return this.originalLanguage;
-	}
-
-	public void setOriginalLanguage(String originalLanguage) {
-		this.originalLanguage = originalLanguage;
-	}
-
 	public String getRating() {
 		return this.rating;
 	}
@@ -130,14 +121,6 @@ public class Film implements Serializable {
 
 	public void setReleaseYear(Date releaseYear) {
 		this.releaseYear = releaseYear;
-	}
-
-	public String getSpecialFeatures() {
-		return this.specialFeatures;
-	}
-
-	public void setSpecialFeatures(String specialFeatures) {
-		this.specialFeatures = specialFeatures;
 	}
 
 	public String getTitle() {

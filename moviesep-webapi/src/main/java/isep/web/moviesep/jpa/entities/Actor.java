@@ -2,6 +2,9 @@ package isep.web.moviesep.jpa.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
 
@@ -30,6 +33,7 @@ public class Actor implements Serializable {
 	private String lastName;
 
 	//bi-directional many-to-many association to Film
+	@JsonIgnoreProperties("actors")
 	@ManyToMany(mappedBy="actors")
 	private List<Film> films;
 

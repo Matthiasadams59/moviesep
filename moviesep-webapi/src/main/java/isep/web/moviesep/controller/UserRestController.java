@@ -57,7 +57,7 @@ public class UserRestController
 	@RequestMapping(value = "/user/", method = RequestMethod.POST)
 	public ResponseEntity<Void> createUser(@RequestBody UserWO userWO, UriComponentsBuilder ucBuilder)
 	{
-		System.out.println("Creating User " + userWO.getLastName());
+		System.out.println("Creating User " + userWO.getUsername());
 
 		userService.saveUser(userWO);
 
@@ -78,9 +78,6 @@ public class UserRestController
 			return new ResponseEntity<UserWO>(HttpStatus.NOT_FOUND);
 		}
 
-		currentUser.setFirstName(userWO.getFirstName());
-		currentUser.setLastName(userWO.getLastName());
-		currentUser.setMail(userWO.getMail());
 		currentUser.setPassword(userWO.getPassword());
 		currentUser.setUsername(userWO.getUsername());
 		currentUser.setFilms(userWO.getFilms());

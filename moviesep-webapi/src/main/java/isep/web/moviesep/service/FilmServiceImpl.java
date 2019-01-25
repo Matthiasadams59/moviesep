@@ -53,10 +53,8 @@ public class FilmServiceImpl implements FilmService {
 		film.setDescription(filmWO.getDescription());
 		film.setLanguage(filmWO.getLanguage());
 		film.setLength(filmWO.getLength());
-		film.setOriginalLanguage(filmWO.getOriginalLanguage());
 		film.setRating(filmWO.getRating());
 		film.setReleaseYear(filmWO.getReleaseYear());
-		film.setSpecialFeatures(filmWO.getSpecialFeatures());
 		film.setTitle(filmWO.getTitle());
 		film.setActors(filmWO.getActors());
 		film.setUsers(filmWO.getUsers());
@@ -70,10 +68,8 @@ public class FilmServiceImpl implements FilmService {
 		film2update.setDescription(filmWO.getDescription());
 		film2update.setLanguage(filmWO.getLanguage());
 		film2update.setLength(filmWO.getLength());
-		film2update.setOriginalLanguage(filmWO.getOriginalLanguage());
 		film2update.setRating(filmWO.getRating());
 		film2update.setReleaseYear(filmWO.getReleaseYear());
-		film2update.setSpecialFeatures(filmWO.getSpecialFeatures());
 		film2update.setTitle(filmWO.getTitle());
 		film2update.setActors(filmWO.getActors());
 		film2update.setUsers(filmWO.getUsers());

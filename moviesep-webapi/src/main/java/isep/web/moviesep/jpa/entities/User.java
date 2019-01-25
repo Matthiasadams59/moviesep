@@ -2,6 +2,9 @@ package isep.web.moviesep.jpa.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
 
@@ -20,15 +23,6 @@ public class User implements Serializable {
 	@Column(name="user_id", unique=true, nullable=false)
 	private int userId;
 
-	@Column(name="first_name", nullable=false, length=45)
-	private String firstName;
-
-	@Column(name="last_name", nullable=false, length=45)
-	private String lastName;
-
-	@Column(nullable=false, length=45)
-	private String mail;
-
 	@Column(nullable=false, length=45)
 	private String password;
 
@@ -36,6 +30,7 @@ public class User implements Serializable {
 	private String username;
 
 	//bi-directional many-to-many association to Film
+	@JsonIgnoreProperties("users")
 	@ManyToMany
 	@JoinTable(
 		name="user_favorite_movies"
@@ -57,30 +52,6 @@ public class User implements Serializable {
 
 	public void setUserId(int userId) {
 		this.userId = userId;
-	}
-
-	public String getFirstName() {
-		return this.firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return this.lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getMail() {
-		return this.mail;
-	}
-
-	public void setMail(String mail) {
-		this.mail = mail;
 	}
 
 	public String getPassword() {

@@ -17,10 +17,8 @@ public class FilmWO extends WebObject
 	protected String					description;
 	protected String					language;
 	protected int						length;
-	protected String					originalLanguage;
 	protected String 					rating;
 	protected Date						releaseYear;
-	protected String					specialFeatures;
 	protected String					title;
 	protected List<Actor>				actors;
 	protected List<User>				users;
@@ -40,10 +38,8 @@ public class FilmWO extends WebObject
 		this.description = description;
 		this.language = language;
 		this.length = length;
-		this.originalLanguage = originalLanguage;
 		this.rating = rating;
 		this.releaseYear = releaseYear;
-		this.specialFeatures = specialFeatures;
 		this.title = title;
 		this.actors = actors;
 		this.users = users;
@@ -57,10 +53,8 @@ public class FilmWO extends WebObject
 		this.description = film.getDescription();
 		this.language = film.getLanguage();
 		this.length = film.getLength();
-		this.originalLanguage = film.getOriginalLanguage();
 		this.rating = film.getRating();
 		this.releaseYear = film.getReleaseYear();
-		this.specialFeatures = film.getSpecialFeatures();
 		this.title = film.getTitle();
 		this.actors = film.getActors();
 		this.users = film.getUsers();
@@ -125,19 +119,6 @@ public class FilmWO extends WebObject
 	}
 
 
-
-	public String getOriginalLanguage() {
-		return originalLanguage;
-	}
-
-
-
-	public void setOriginalLanguage(String originalLanguage) {
-		this.originalLanguage = originalLanguage;
-	}
-
-
-
 	public String getRating() {
 		return rating;
 	}
@@ -159,20 +140,6 @@ public class FilmWO extends WebObject
 	public void setReleaseYear(Date releaseYear) {
 		this.releaseYear = releaseYear;
 	}
-
-
-
-	public String getSpecialFeatures() {
-		return specialFeatures;
-	}
-
-
-
-	public void setSpecialFeatures(String specialFeatures) {
-		this.specialFeatures = specialFeatures;
-	}
-
-
 
 	public String getTitle() {
 		return title;
@@ -213,8 +180,8 @@ public class FilmWO extends WebObject
 	@Override
 	public String toString() {
 		return "FilmWO [filmId=" + filmId + ", category=" + category + ", description=" + description + ", language="
-				+ language + ", length=" + length + ", originalLanguage=" + originalLanguage + ", rating=" + rating
-				+ ", releaseYear=" + releaseYear + ", specialFeatures=" + specialFeatures + ", title=" + title
+				+ language + ", length=" + length + ", rating=" + rating
+				+ ", releaseYear=" + releaseYear + ", title=" + title
 				+ ", actors=" + actors.toString() + ", users=" + users.toString() + "]";
 	}
 	

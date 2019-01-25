@@ -82,10 +82,8 @@ public class FilmRestController
 		currentFilm.setDescription(filmWO.getDescription());
 		currentFilm.setLanguage(filmWO.getLanguage());
 		currentFilm.setLength(filmWO.getLength());
-		currentFilm.setOriginalLanguage(filmWO.getOriginalLanguage());
 		currentFilm.setRating(filmWO.getRating());
 		currentFilm.setReleaseYear(filmWO.getReleaseYear());
-		currentFilm.setSpecialFeatures(filmWO.getSpecialFeatures());
 		currentFilm.setTitle(filmWO.getTitle());
 		currentFilm.setActors(filmWO.getActors());
 		currentFilm.setUsers(filmWO.getUsers());
