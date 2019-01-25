@@ -4,9 +4,34 @@ React project bootstrapped with [Create React App](https://github.com/facebook/c
 
 ## Deployment
 
-Open the Spring Suite Tool and run the sakila business api : https://github.com/Matthiasadams59/sakila-business-webapi  
+To launch the Java API Server, first of all import the moviesep database from the moviesep-webapi/ folder into your MySQL provider.  
+Once imported edit the file : moviesep-webapi/src/main/resources/application.properties to make sure the configuration correspond to your MySQL provider settings.  
+By default, using MAMP the MySQL port will be 8889, the default user/password will be root/root.  
+Then from the root of the project :  
+```
+cd moviesep-webapi/  
+mvn install  
+mvn clean compile package  
+java -jar target/moviesep-webapi-0.0.1-SNAPSHOT.jar  
+```
+If everything is fine, the api server should start listening on port 8080.  
 
-At the root of the project :
+Performing a GET request will return :  
+* The list of actors on /actor/, a specific actor on /actor/{id}  
+* The list of users on /user/, a specific user on /user/{id}  
+* The list of films on /film/, a specific film on /film/{id}  
+
+Performing a POST request :
+* To create an actor on /actor/, to update a specific actor on /actorUpdate/{id}  
+* To create a film on /film/, to update a specific film on /filmUpdate/{id}  
+* To create a user on /user/, to update a specific user on /userUpdate/{id}  
+
+Performing a DELETE request :  
+* To delete an actor on /actorDelete/{id}  
+* To delete a film on /filmDelete/{id}  
+* To delete a user on /userDelete/{id}
+
+Afterwards, go back to the root of the project :
 ```
 npm install
 ```
@@ -32,8 +57,8 @@ The project will start on localhost:3000
 
 * Java 8+
 * Maven
-* Sakila database (https://dev.mysql.com/doc/sakila/en/) imported in your MySQL Provider
-* MySQL Active on Port 8889
+* Moviesep database (moviesep-webapi/moviesep-database.sql) imported in your MySQL Provider
+* MySQL Active on Port 8889 (by default for MAMP users)
 * React  
 * NodeJs  
 * NPM  
