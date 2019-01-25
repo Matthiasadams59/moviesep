@@ -43,7 +43,11 @@ If you want to execute the tests :
 ```
 npm test
 ```
-The project will start on localhost:3000
+The project will start on localhost:3000  
+
+Two users come with the application : 
+* User 1 : username =  'rippaulwalker', password = 'ff4life'  
+* User 2 : username = 'thanosdu92', password = 'madarauchiha'  
 
 ## Built with
 
