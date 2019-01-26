@@ -4,9 +4,9 @@ React project bootstrapped with [Create React App](https://github.com/facebook/c
 
 ## What Has Been Done
 
-* Displaying list of films 
-* Accessing Every Film And Updating It's Data
-* Every Film allows us to access Actor Pages
+* Displaying List Of Films 
+* Accessing Every Film And Updating Its Data
+* Every Film Features Different Actors And We Can Click On Them To Access More Information About The Actors
 
 ## Deployment
 
@@ -73,7 +73,7 @@ Two users come with the application :
 * NodeJs  
 * NPM  
 
-## Author
+## Authors
 
 Ali Taïga Matthias-Adams  
 William Aboucaya  
