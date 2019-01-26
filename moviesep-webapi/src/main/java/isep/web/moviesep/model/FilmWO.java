@@ -18,7 +18,7 @@ public class FilmWO extends WebObject
 	protected String					language;
 	protected int						length;
 	protected String 					rating;
-	protected Date						releaseYear;
+	protected int						releaseYear;
 	protected String					title;
 	protected List<Actor>				actors;
 	protected List<User>				users;
@@ -30,7 +30,7 @@ public class FilmWO extends WebObject
 		super();
 	}
 
-	public FilmWO(int filmId, String category, String description, String language, int length, String originalLanguage, String rating, Date releaseYear, String specialFeatures, String title, List<Actor> actors, List<User> users)
+	public FilmWO(int filmId, String category, String description, String language, int length, String originalLanguage, String rating, int releaseYear, String specialFeatures, String title, List<Actor> actors, List<User> users)
 	{
 		super();
 		this.filmId = filmId;
@@ -131,13 +131,13 @@ public class FilmWO extends WebObject
 
 
 
-	public Date getReleaseYear() {
+	public int getReleaseYear() {
 		return releaseYear;
 	}
 
 
 
-	public void setReleaseYear(Date releaseYear) {
+	public void setReleaseYear(int releaseYear) {
 		this.releaseYear = releaseYear;
 	}
 

@@ -16,9 +16,10 @@ const getFilm = async (filmId, callback) => {
 
 const updateFilm = async (film) => {
     let result
+    console.log(film)
 
     try {
-        result = await Axios.post("http://localhost:8080/filmUpdate", film)
+        result = await Axios.post("http://localhost:8080/filmUpdate/", film)
     } catch (error) {
         console.log(error)
         result = null

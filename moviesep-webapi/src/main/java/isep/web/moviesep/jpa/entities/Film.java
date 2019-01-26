@@ -38,9 +38,8 @@ public class Film implements Serializable {
 	@Column(length=20)
 	private String rating;
 
-	@Temporal(TemporalType.DATE)
 	@Column(name="release_year")
-	private Date releaseYear;
+	private int releaseYear;
 
 	@Column(nullable=false, length=255)
 	private String title;
@@ -115,11 +114,11 @@ public class Film implements Serializable {
 		this.rating = rating;
 	}
 
-	public Date getReleaseYear() {
+	public int getReleaseYear() {
 		return this.releaseYear;
 	}
 
-	public void setReleaseYear(Date releaseYear) {
+	public void setReleaseYear(int releaseYear) {
 		this.releaseYear = releaseYear;
 	}
 
