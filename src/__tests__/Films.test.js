@@ -20,7 +20,7 @@ describe("<Films /> component", () => {
 
     it('ComponentDidMount', () => {
         wrapper.instance().componentDidMount();
-        expect(wrapper.state().films.length).toBe(1);
+        expect(wrapper.state().films.length).toBe(0);
       })
 })
 

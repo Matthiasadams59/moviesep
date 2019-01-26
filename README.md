@@ -2,16 +2,11 @@
 
 React project bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Structure 
+## What Has Been Done
 
-In the menu bar we have three elements :
-* Login
-* Home (profile/favorites)
-* Films List 
-
-You can access the other pages with :
-* Actor : /actor
-* Film : /film
+* Displaying list of films 
+* Accessing Every Film And Updating It's Data
+* Every Film allows us to access Actor Pages
 
 ## Deployment
 
