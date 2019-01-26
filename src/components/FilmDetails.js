@@ -21,9 +21,9 @@ class FilmDetails extends Component {
         }
     }
 
-    componentDidMount() {
-        getFilm(this.props.match.params.id, async (film) => {
-            this.state = {
+    async componentDidMount() {
+        getFilm(this.props.match.params.id, (film) => {
+            this.setState({
                 filmId: film.filmId,
                 filmTitle: film.title,
                 filmDescription: film.description,
@@ -32,7 +32,7 @@ class FilmDetails extends Component {
                 filmCategory: film.category,
                 filmLength: film.length,
                 filmRating: film.rating
-            }
+            })
         })
     }
 
