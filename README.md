@@ -4,7 +4,7 @@ React project bootstrapped with [Create React App](https://github.com/facebook/c
 
 ## Structure 
 
-In the menu bar we three elements :
+In the menu bar we have three elements :
 * Login
 * Home (profile/favorites)
 * Films List 
