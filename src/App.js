@@ -35,7 +35,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/login" component={(props) => <LoginForm {...props} login_handler={this.login_handler}/>} />
               <Route path="/actor" component={Actor} />
-              <Route path="/film" component={Film} />
+              <Route path="/film/:id" component={Film} />
               <Route path="/films" component={Films} />
               <Route component={Error404} />
             </Switch>

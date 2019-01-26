@@ -24,6 +24,8 @@
 
 .ui {
   padding-top: 55px;
+  width: 50%;
+  margin: auto;
 }
 
 @keyframes App-logo-spin {
