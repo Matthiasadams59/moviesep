@@ -47,7 +47,7 @@ class Films extends Component {
                                             <Typography component="p">{film.description}</Typography>
                                         </CardContent>
                                         <CardActions>
-                                            <Button href="/film/{index}" style={{margin:'auto'}}>Learn More</Button>
+                                            <Button href={'/film/' + film.filmId} style={{margin:'auto'}}>Learn More</Button>
                                         </CardActions>
                                     </Card>  
                                 )
