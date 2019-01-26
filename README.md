@@ -2,6 +2,17 @@
 
 React project bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Structure 
+
+In the menu bar we three elements :
+* Login
+* Home (profile/favorites)
+* Films List 
+
+You can access the other pages with :
+* Actor : /actor
+* Film : /film
+
 ## Deployment
 
 To launch the Java API Server, first of all import the moviesep database from the moviesep-webapi/ folder into your MySQL provider.  
