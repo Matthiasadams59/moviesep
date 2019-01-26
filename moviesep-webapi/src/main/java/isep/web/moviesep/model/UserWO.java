@@ -27,6 +27,12 @@ public class UserWO {
 		this.films = films;
 	}
 	
+	public UserWO(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	}
+	
 	public UserWO(final User user) {
 		this.userId = user.getUserId();
 		this.password = user.getPassword();

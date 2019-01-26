@@ -47,8 +47,7 @@ class App extends Component {
 
   login_handler = (result) => {
     if (result) {
-      this.props.loginCookie = result
-      this.props.isLoggedIn = true
+      window.location.replace("/user/"+result.data.userId)
     }
   }
 }
