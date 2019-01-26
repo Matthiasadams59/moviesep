@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 
 import { getFilm, updateFilm } from './../helpers/film_details_helper';
 import TextField from '@material-ui/core/TextField';
+import List from '@material-ui/core/List';
+import ListItemText from '@material-ui/core/ListItemText';
+
 import Button from '@material-ui/core/Button';
 import Axios from 'axios'
 
@@ -95,6 +98,13 @@ class FilmDetails extends Component {
                     onChange={this.handleChange('filmRating')}
                     margin="normal" />
                 <br />
+                <List>
+                    {this.state.actors.map((actor, index) => {
+                        return (
+                            <ListItemText key={index}><Button href={"/actor/" + actor.actorId}>{actor.firstName + " " + actor.lastName}</Button></ListItemText>
+                        )
+                    })}
+                </List>
                 <br />
                 <Button variant="contained" color="primary" onClick={() => this.makeFilmUpdate()}>
                     Save changes
