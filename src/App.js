@@ -37,6 +37,7 @@ class App extends Component {
               <Route path="/actor/:id" component={Actor} />
               <Route path="/film/:id" component={FilmDetails} />
               <Route path="/films" component={Films} />
+              <Route path="/user/:id" component={User} />
               <Route component={Error404} />
             </Switch>
           </div>
