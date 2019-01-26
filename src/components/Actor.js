@@ -3,6 +3,7 @@ import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
+import { getActor } from './../helpers/actor_helper';
 
 
 class Actor extends Component {
@@ -10,24 +11,25 @@ class Actor extends Component {
         super(props)
 
         this.state = {
-            actorId: '',
-            actor: []
+            actorId: 0,
+            lastName: '',
+            firstName: '',
+            gender: '',
+            films: [] 
         }
     }
 
-    getActor = async (e) => {
-        await axios
-        .get("http://localhost:8080/actor/5")
-        .then( response => {
-            this.setState({
-                actor: response.data,
-            })
-        })
-        .catch(error => this.setState({ error }))
-    }
 
     componentDidMount= () => {
-        this.getActor();
+        getActor(5, (actor) => {
+            this.setState({
+                actorId: actor.actorId,
+                lastName: actor.lastName,
+                firstName: actor.firstName,
+                gender: actor.gender,
+                films: actor.films
+            })
+        })
     }
 
     render() {
@@ -38,14 +40,21 @@ class Actor extends Component {
                     <div>  
                         <List>
                             <ListItemText>
-                                First Name: {this.state.actor.firstName}
+                                First Name: {this.state.firstName}
                             </ListItemText>
                             <ListItemText>
-                                Last Name: {this.state.actor.lastName}
+                                Last Name: {this.state.lastName}
                             </ListItemText>
                             <ListItemText>
-                                Gender: {this.state.actor.gender}
+                                Gender: {this.state.gender}
                             </ListItemText>
+                            <List>
+                                {this.state.films.map((film, index) => {
+                                    return (
+                                        <ListItemText key={index}>{film.title}</ListItemText>
+                                    )
+                                })}
+                            </List>
                         </List>
                     </div>
             </div>
