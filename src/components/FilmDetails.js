@@ -4,11 +4,12 @@ import { getFilm, updateFilm } from './../helpers/film_details_helper';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
+
 class FilmDetails extends Component {
     constructor() {
         super()
 
-        getFilm(this.props.match.params.id, (film) => {
+        getFilm(this.props.match.params.id, async (film) => {
             this.state = {
                 filmId: film.filmId,
                 filmTitle: film.title,
@@ -83,7 +84,7 @@ class FilmDetails extends Component {
         )
     }
 
-    makeFilmUpdate = () => {
+    makeFilmUpdate = async () => {
         updateFilm({
             filmId: this.state.filmId,
             title: this.state.filmTitle,
