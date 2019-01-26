@@ -24,7 +24,7 @@ class Films extends Component {
         .catch(error => this.setState({ error }))
     }
 
-    componentDidMount= () => {
+    componentDidMount = () => {
         this.getFilms();
     }
 

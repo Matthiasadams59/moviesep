@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Films /> component renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Films />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <WithStyles(Typography)
+          variant="h2"
+        >
+          FILMS LIST
+        </WithStyles(Typography)>,
+        <div>
+          <WithStyles(List)
+            style={
+              Object {
+                "display": "flex",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "overflow": "hidden",
+              }
+            }
+          />
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "FILMS LIST",
+          "variant": "h2",
+        },
+        "ref": null,
+        "rendered": "FILMS LIST",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <WithStyles(List)
+            style={
+              Object {
+                "display": "flex",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "overflow": "hidden",
+              }
+            }
+          />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [],
+            "style": Object {
+              "display": "flex",
+              "flexWrap": "wrap",
+              "justifyContent": "space-around",
+              "overflow": "hidden",
+            },
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <WithStyles(Typography)
+            variant="h2"
+          >
+            FILMS LIST
+          </WithStyles(Typography)>,
+          <div>
+            <WithStyles(List)
+              style={
+                Object {
+                  "display": "flex",
+                  "flexWrap": "wrap",
+                  "justifyContent": "space-around",
+                  "overflow": "hidden",
+                }
+              }
+            />
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "FILMS LIST",
+            "variant": "h2",
+          },
+          "ref": null,
+          "rendered": "FILMS LIST",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <WithStyles(List)
+              style={
+                Object {
+                  "display": "flex",
+                  "flexWrap": "wrap",
+                  "justifyContent": "space-around",
+                  "overflow": "hidden",
+                }
+              }
+            />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [],
+              "style": Object {
+                "display": "flex",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "overflow": "hidden",
+              },
+            },
+            "ref": null,
+            "rendered": Array [],
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

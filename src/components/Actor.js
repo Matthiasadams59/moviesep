@@ -48,6 +48,7 @@ class Actor extends Component {
                             <ListItemText>
                                 Gender: {this.state.gender}
                             </ListItemText>
+                            <Typography variant="h4">Movies</Typography>
                             <List>
                                 {this.state.films.map((film, index) => {
                                     return (
