@@ -9,6 +9,19 @@ class FilmDetails extends Component {
     constructor() {
         super()
 
+        this.state = {
+            filmId: 0,
+            filmTitle: '',
+            filmDescription: '',
+            filmReleaseYear: 0,
+            filmLanguage: '',
+            filmCategory: '',
+            filmLength: 0,
+            filmRating: 0
+        }
+    }
+
+    componentDidMount() {
         getFilm(this.props.match.params.id, async (film) => {
             this.state = {
                 filmId: film.filmId,
@@ -77,7 +90,7 @@ class FilmDetails extends Component {
                     onChange={this.handleChange('filmRating')}
                     margin="normal" />
                 <br />
-                <Button variant="contained" color="primary" onClick={this.makeFilmUpdate()}>
+                <Button variant="contained" color="primary" onClick={() => this.makeFilmUpdate()}>
                     Save changes
                 </Button>
             </form>

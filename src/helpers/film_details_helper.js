@@ -4,13 +4,14 @@ const getFilm = async (filmId, callback) => {
     let result
 
     try {
-        result = await Axios.get("http://localhost:8080/film/" + filmId)
+        result = await Axios.get("http://localhost:8080/film/"+filmId)
+        console.log(result.data)
     } catch (error) {
         console.log(error)
         result = null
     }
 
-    callback(result)
+    callback(result.data)
 }
 
 const updateFilm = async (film) => {
