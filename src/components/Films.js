@@ -1,26 +1,8 @@
 import React, {Component} from 'react'
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
-import axios from 'axios';
-import films_helper from './../helpers/films_helper'
-import Film from './Film';
-
-const styles = {
-    card: {
-      minWidth: 275,
-    },
-    bullet: {
-      display: 'inline-block',
-      margin: '0 2px',
-      transform: 'scale(0.8)',
-    },
-    title: {
-      fontSize: 14,
-    },
-    pos: {
-      marginBottom: 12,
-    },
-};
+import axios from 'axios'
+import Film from './Film'
 
 class Films extends Component {
     constructor(props) {
@@ -29,14 +11,6 @@ class Films extends Component {
         this.state = {
             films: [],
         }
-    }
-
-    getFilms2 = async (e) => {
-        films_helper( (results) => {
-            this.setState({
-                films: results
-            })
-        })
     }
 
     getFilms = (e) => {
