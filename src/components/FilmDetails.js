@@ -3,7 +3,10 @@ import React, { Component } from 'react'
 import { getFilm, updateFilm } from './../helpers/film_details_helper';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
 
 class FilmDetails extends Component {
     constructor() {
@@ -17,7 +20,8 @@ class FilmDetails extends Component {
             filmLanguage: '',
             filmCategory: '',
             filmLength: 0,
-            filmRating: 0
+            filmRating: 0,
+            filmActors: []
         }
     }
 
@@ -31,7 +35,8 @@ class FilmDetails extends Component {
                 filmLanguage: film.language,
                 filmCategory: film.category,
                 filmLength: film.length,
-                filmRating: film.rating
+                filmRating: film.rating,
+                filmActors: film.actors
             })
         })
     }
@@ -90,6 +95,26 @@ class FilmDetails extends Component {
                     onChange={this.handleChange('filmRating')}
                     margin="normal" />
                 <br />
+                    <FormControl>
+                        <InputLabel htmlFor="age-simple">Age</InputLabel>
+                        <Select
+                            value={this.state.filmActors}
+                            onChange={this.handleChange}
+                            margin="normal"
+                            inputProps={{
+                            name: 'age',
+                            id: 'age-simple',
+                            }}
+                        >
+                            
+                            {this.state.filmActors.map((actor, index) => (
+                                <MenuItem key={index} value={actor}>{actor}</MenuItem>
+                            ))}
+                            
+                        </Select>
+                    </FormControl>
+
+                <br />    
                 <Button variant="contained" color="primary" onClick={() => this.makeFilmUpdate()}>
                     Save changes
                 </Button>
