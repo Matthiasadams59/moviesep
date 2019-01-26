@@ -21,7 +21,7 @@ class Actor extends Component {
 
 
     componentDidMount= () => {
-        getActor(5, (actor) => {
+        getActor(this.props.match.params.id, (actor) => {
             this.setState({
                 actorId: actor.actorId,
                 lastName: actor.lastName,
