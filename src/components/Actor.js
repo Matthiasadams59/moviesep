@@ -36,12 +36,17 @@ class Actor extends Component {
 
         return(
             <div>
-                {console.log(this.state.actor)}
+                {console.log(this.state.actor.films)}
                 <Typography variant="h2">ACTOR INFO</Typography>
                     <div>  
                         <p>{this.state.actor.firstName}</p>
                         <p>{this.state.actor.lastName}</p>
                         <p>{this.state.actor.gender}</p>
+                        {/*
+                        {Object.keys(this.state.actor.films).map( (film, index) => (
+                            <li key={index}>{film.category}</li> 
+                        ))}
+                        */}
                     </div>
             </div>
         )
