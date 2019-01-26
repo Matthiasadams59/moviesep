@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { getFilm, updateFilm } from './../helpers/film_details_helper';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Axios from 'axios'
 
 
 class FilmDetails extends Component {
@@ -17,7 +18,8 @@ class FilmDetails extends Component {
             filmLanguage: '',
             filmCategory: '',
             filmLength: 0,
-            filmRating: 0
+            filmRating: 0,
+            actors: []
         }
     }
 
@@ -31,12 +33,15 @@ class FilmDetails extends Component {
                 filmLanguage: film.language,
                 filmCategory: film.category,
                 filmLength: film.length,
-                filmRating: film.rating
+                filmRating: film.rating,
+                actors: film.actors
             })
         })
     }
 
     render() {
+        console.log(this.state.actors)
+
         return (
             <form>
                 <TextField
@@ -89,6 +94,7 @@ class FilmDetails extends Component {
                     value={this.state.filmRating}
                     onChange={this.handleChange('filmRating')}
                     margin="normal" />
+                <br />
                 <br />
                 <Button variant="contained" color="primary" onClick={() => this.makeFilmUpdate()}>
                     Save changes
