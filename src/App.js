@@ -4,6 +4,7 @@ import Home from './components/Home'
 import LoginForm from './components/LoginForm'
 import Actor from './components/Actor'
 import Films from './components/Films'
+import FilmDetails from './components/FilmDetails'
 import Error404 from './components/Error404'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Menu from './components/Menu';
