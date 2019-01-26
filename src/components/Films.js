@@ -35,7 +35,6 @@ class Films extends Component {
 
         return(
             <div>
-                {console.log(this.state.films)}
                 <Typography variant="h2">FILMS LIST</Typography>
                     <div>   
                         <List style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around',overflow: 'hidden'}}>

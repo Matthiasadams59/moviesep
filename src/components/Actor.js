@@ -1,11 +1,9 @@
 import React, {Component} from 'react'
 import List from '@material-ui/core/List';
+import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
 import axios from 'axios';
+
 
 class Actor extends Component {
     constructor(props) {
@@ -17,9 +15,9 @@ class Actor extends Component {
         }
     }
 
-    getActor = (e) => {
-        axios
-        .get("http://localhost:8080/actor/8")
+    getActor = async (e) => {
+        await axios
+        .get("http://localhost:8080/actor/5")
         .then( response => {
             this.setState({
                 actor: response.data,
@@ -36,17 +34,19 @@ class Actor extends Component {
 
         return(
             <div>
-                {console.log(this.state.actor.films)}
                 <Typography variant="h2">ACTOR INFO</Typography>
                     <div>  
-                        <p>{this.state.actor.firstName}</p>
-                        <p>{this.state.actor.lastName}</p>
-                        <p>{this.state.actor.gender}</p>
-                        {/*
-                        {Object.keys(this.state.actor.films).map( (film, index) => (
-                            <li key={index}>{film.category}</li> 
-                        ))}
-                        */}
+                        <List>
+                            <ListItemText>
+                                First Name: {this.state.actor.firstName}
+                            </ListItemText>
+                            <ListItemText>
+                                Last Name: {this.state.actor.lastName}
+                            </ListItemText>
+                            <ListItemText>
+                                Gender: {this.state.actor.gender}
+                            </ListItemText>
+                        </List>
                     </div>
             </div>
         )
