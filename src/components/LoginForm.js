@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import login_helper from './helpers/login_helper'
+import login_helper from './../helpers/login_helper'
 
 class LoginForm extends Component {
   constructor() {

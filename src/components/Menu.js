@@ -36,11 +36,11 @@ class Menu extends Component {
                 </AppBar>
                 <Drawer open={this.state.open} onClose={this.toggleOpen}>
                     <List>
-                        <ListItem><NavLink onClick={this.toggleOpen} exact to="/">Home</NavLink></ListItem>
-                        <ListItem><NavLink onClick={this.toggleOpen} to="/favorites">Favorites</NavLink></ListItem>
                         {this.props.isLoggedIn ? null :
                             <ListItem><NavLink onClick={this.toggleOpen} to="/login">Login</NavLink></ListItem>
                         }
+                        <ListItem><NavLink onClick={this.toggleOpen} exact to="/">Home</NavLink></ListItem>
+                        <ListItem><NavLink onClick={this.toggleOpen} exact to="/films">Films List</NavLink></ListItem>
                     </List>
                 </Drawer>
             </div>

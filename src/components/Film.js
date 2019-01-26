@@ -4,9 +4,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 const Film = (props) =>
-    <ListItem button>
-        <ListItemText primary={props.film} />
-    </ListItem>
+    <p>Film</p>
 
 Film.propTypes = {
     film: PropTypes.string.isRequired
