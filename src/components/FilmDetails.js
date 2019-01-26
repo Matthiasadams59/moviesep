@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
-import { getFilm, updateFilm } from './../helpers/film_details_helper'
+import { getFilm, updateFilm } from './../helpers/film_details_helper';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 class FilmDetails extends Component {
     constructor() {

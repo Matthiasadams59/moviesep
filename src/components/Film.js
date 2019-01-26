@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -14,8 +13,7 @@ const Film = (props) =>
             <Typography component="p">{props.film.description}</Typography>
         </CardContent>
         <CardActions>
-            <Button href="/film/{props.film.filmId}" style={{ margin: 'auto' }}>Learn More</Button>
-            {/* <Link to="/film/{index}">Learn again</Link> */}
+            <Button href={"/film/" + props.film.filmId} style={{ margin: 'auto' }}>Learn More</Button>
         </CardActions>
     </Card>
 

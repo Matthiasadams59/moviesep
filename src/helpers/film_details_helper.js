@@ -13,7 +13,7 @@ const getFilm = async (filmId, callback) => {
     callback(result)
 }
 
-const updateFilm = (film) => {
+const updateFilm = async (film) => {
     let result
 
     try {
