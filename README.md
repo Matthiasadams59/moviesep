@@ -42,7 +42,7 @@ Performing a DELETE request :
 * To delete a film on /filmDelete/{id}  
 * To delete a user on /userDelete/{id}
 
-Afterwards, go back to the root of the project :
+Afterwards, open a new terminal and go back to the root of the project :
 ```
 npm install
 ```
