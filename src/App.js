@@ -3,7 +3,6 @@ import './App.css'
 import Home from './components/Home'
 import LoginForm from './components/LoginForm'
 import Actor from './components/Actor'
-import Film from './components/Film'
 import Films from './components/Films'
 import Error404 from './components/Error404'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
@@ -35,7 +34,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/login" component={(props) => <LoginForm {...props} login_handler={this.login_handler}/>} />
               <Route path="/actor" component={Actor} />
-              <Route path="/film/:id" component={Film} />
+              <Route path="/film/:id" component={FilmDetails} />
               <Route path="/films" component={Films} />
               <Route component={Error404} />
             </Switch>
