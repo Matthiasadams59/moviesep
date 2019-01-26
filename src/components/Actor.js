@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
-import axios from 'axios';
+import Button from '@material-ui/core/Button';
 import { getActor } from './../helpers/actor_helper';
 
 
@@ -51,7 +51,7 @@ class Actor extends Component {
                             <List>
                                 {this.state.films.map((film, index) => {
                                     return (
-                                        <ListItemText key={index}>{film.title}</ListItemText>
+                                        <ListItemText key={index}><Button href={"/film/" + film.filmId}>{film.title}</Button></ListItemText>
                                     )
                                 })}
                             </List>

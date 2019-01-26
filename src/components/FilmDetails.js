@@ -22,7 +22,8 @@ class FilmDetails extends Component {
             filmCategory: '',
             filmLength: 0,
             filmRating: 0,
-            actors: []
+            actors: [],
+            users: []
         }
     }
 
@@ -37,7 +38,8 @@ class FilmDetails extends Component {
                 filmCategory: film.category,
                 filmLength: film.length,
                 filmRating: film.rating,
-                actors: film.actors
+                actors: film.actors,
+                users: film.users
             })
         })
     }
@@ -114,15 +116,19 @@ class FilmDetails extends Component {
     }
 
     makeFilmUpdate = async () => {
+        console.log(this.state.filmId)
+        console.log(this.state.actors)
         updateFilm({
             filmId: this.state.filmId,
-            title: this.state.filmTitle,
             category: this.state.filmCategory,
             description: this.state.filmDescription,
-            length: this.state.filmLength,
             language: this.state.filmLanguage,
+            length: this.state.filmLength,
+            rating: this.state.filmRating,
             releaseYear: this.state.filmReleaseYear,
-            rating: this.state.filmRating
+            title: this.state.filmTitle,
+            actors: this.state.actors,
+            users: this.state.users
         })
     }
 
