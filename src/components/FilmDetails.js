@@ -8,7 +8,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Button from '@material-ui/core/Button';
 import Axios from 'axios'
 
-
 class FilmDetails extends Component {
     constructor() {
         super()
@@ -23,7 +22,7 @@ class FilmDetails extends Component {
             filmLength: 0,
             filmRating: 0,
             actors: [],
-            users: []
+            users: [],
         }
     }
 
@@ -116,8 +115,6 @@ class FilmDetails extends Component {
     }
 
     makeFilmUpdate = async () => {
-        console.log(this.state.filmId)
-        console.log(this.state.actors)
         updateFilm({
             filmId: this.state.filmId,
             category: this.state.filmCategory,
@@ -130,6 +127,7 @@ class FilmDetails extends Component {
             actors: this.state.actors,
             users: this.state.users
         })
+        alert('updated!');
     }
 
     handleChange = name => event => {
