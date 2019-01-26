@@ -1,11 +1,8 @@
 import React, {Component} from 'react'
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import axios from 'axios';
+import axios from 'axios'
+import Film from './Film'
 
 class Films extends Component {
     constructor(props) {
@@ -40,15 +37,7 @@ class Films extends Component {
                         <List style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around',overflow: 'hidden'}}>
                             {
                                 this.state.films.map((film, index) => (
-                                    <Card key={index} style={{margin:'3%', width:'30%'}}>
-                                        <CardContent>
-                                            <Typography variant="h3">{film.title}</Typography>
-                                            <Typography component="p">{film.description}</Typography>
-                                        </CardContent>
-                                        <CardActions>
-                                            <Button href={'/film/' + film.filmId} style={{margin:'auto'}}>Learn More</Button>
-                                        </CardActions>
-                                    </Card>  
+                                    <Film key={index} film={film}/>                                    
                                 )
                             )}   
                         </List>
