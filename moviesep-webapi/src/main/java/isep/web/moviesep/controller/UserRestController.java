@@ -38,6 +38,21 @@ public class UserRestController
 		}
 		return new ResponseEntity<List<UserWO>>(users, HttpStatus.OK);
 	}
+	
+	@RequestMapping(value = "/login/", method = RequestMethod.POST)
+	public ResponseEntity<UserWO> login(@RequestBody UserWO userWO)
+	{
+		log.error(String.format("Searching User %s ", userWO.getUsername()));
+		List<UserWO> users = userService.findAllUsers();
+		for (UserWO user : users) {
+			if (user.getUsername().equals(userWO.getUsername()) && user.getPassword().equals(userWO.getPassword())) {
+				System.out.println("User found!");
+				return new ResponseEntity<UserWO>(user, HttpStatus.OK);
+			}
+		}
+		return new ResponseEntity<UserWO>(HttpStatus.UNAUTHORIZED);
+		
+	}
 
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<UserWO> getUser(@PathVariable("id") int id)

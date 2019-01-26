@@ -4,7 +4,7 @@ const login_helper = async (username, password, callback) => {
     let result
 
     try {
-        const loginResult = await Axios.post("http://localhost:8080/", {
+        const loginResult = await Axios.post("http://localhost:8080/login/", {
             'username': username,
             'password': password
         })
